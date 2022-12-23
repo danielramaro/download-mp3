@@ -8,7 +8,7 @@ import os
 
 url = []
 
-playlist_url = Playlist('https://www.youtube.com/playlist?list=PLj9XdH8ieaI7US7q72S3PlRHiGTZM4ajE')
+playlist_url = Playlist('insert playlist link here')
 
 for link in playlist_url:
     url.append(link)
@@ -16,7 +16,7 @@ for link in playlist_url:
 for link in url:
     yt = YouTube(link)
     video = yt.streams.filter(only_audio=True).first()
-    pasta = r"C:\Users\danie\OneDrive\Área de Trabalho\mp3"
+    pasta = r"insert folder here"
     
     output = video.download(output_path=pasta)
     
